@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+#root {
+  padding: 15px;
+}
+
+form {
+  padding: 5px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+input {
+  display: block;
+  width: 150px;
+  margin: 5px 0;
+}
+
+form button {
+  display: block;
+}
+
+button {
+  margin: 5px;
+}
+
+li {
+  list-style: none;
+}
