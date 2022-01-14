@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ContactStyled = styled.form`
+const ContactStyled = styled.section`
   button {
     cursor: pointer;
     background: none;

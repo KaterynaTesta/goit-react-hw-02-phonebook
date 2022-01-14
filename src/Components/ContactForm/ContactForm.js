@@ -32,29 +32,15 @@ class ContactForm extends Component {
   render() {
     const { name, number } = this.state;
     return (
-      <ContactStyled onSubmit={this.handleSubmit}>
-        <h2>Name</h2>
-        <input
-          type="text"
-          name="name"
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
-          required
-          value={name}
-          onChange={this.handleChange}
-        />
-        <h2>Number</h2>
-        <input
-          type="tel"
-          name="number"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Номер телефона должен состоять из цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-          required
-          value={number}
-          onChange={this.handleChange}
-        />
-        <p></p>
-        <button type="submit">Add new contact</button>
+      <ContactStyled>
+        <form onSubmit={this.handleSubmit}>
+          <h2>Name</h2>
+          <input type="text" value={name} name="name" onChange={this.handleChange} />
+          <h2>Number</h2>
+          <input type="text" name="number" value={number} onChange={this.handleChange} />
+          <p></p>
+          <button type="submit"> Add new contact </button>
+        </form>
       </ContactStyled>
     );
   }

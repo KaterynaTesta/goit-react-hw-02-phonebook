@@ -4,7 +4,6 @@ import { nanoid } from 'nanoid';
 import ContactForm from './Components/ContactForm/ContactForm';
 import ContactList from './Components/ContactList/ContactList';
 import Filter from './Components/Filter/Filter';
-import SectionStyled from './Components/AppStyled';
 
 const filterContacts = (contacts, filter) =>
   contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase()));
@@ -48,7 +47,7 @@ class App extends Component {
     const { contacts, filter } = this.state;
     const filteredContacts = filterContacts(contacts, filter);
     return (
-      <SectionStyled>
+      <>
         <h1>Phonebook</h1>
 
         <ContactForm onSubmitData={this.onSubmitData} />
@@ -59,7 +58,7 @@ class App extends Component {
             <ContactList contacts={filteredContacts} onDeleteContact={this.onDeleteContact} />
           </>
         )}
-      </SectionStyled>
+      </>
     );
   }
 }
